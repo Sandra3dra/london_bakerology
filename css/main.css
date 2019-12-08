@@ -1,0 +1,746 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Font styles from Google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+p
+{
+	color: #fff;
+	/* background: #aadad1;
+	text-align: center; */
+	margin: 0;
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav
+{
+	margin: 0;
+	padding: 0;
+}
+
+img
+{
+	border: none; /*Remove border if image is a link*/
+	margin: 0;
+	padding: 0;
+}
+
+/*html selectors*/
+
+body
+{
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+
+/*a:link is for not visited(standard unclicked link),
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited
+{
+ 	text-decoration:none;
+}
+
+a:hover, a:active
+{
+	text-decoration:none;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*Site Container*/
+/*Header and Footer*/
+.container
+{
+	margin: 0 auto;
+	width: 960px;
+	background-color: #f5f1ee;
+}
+
+#topBar
+{
+	background-color: #81c8bb;
+	height: 24px;
+}
+
+.mainHeader
+{
+	margin-top: 40px;
+	margin-bottom: 35px;
+	margin-right: 21px;
+	margin-left: 70px;
+/*	height: 183px;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#logo
+{
+	width: 106px;
+	height: 123px;
+}
+
+.headerRight
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	width: 500px;
+}
+
+.socialMedia
+{
+	width: 160px; /*I added it  */
+/*	height: 51px;*/ /*I added it  */
+	margin-left: auto;
+	/* margin-bottom: 2px; */
+	/*line-height: 40px;*/
+	align-self: flex-end;
+	margin-right: 0;
+	margin-bottom: 20px;
+}
+
+ /* social media icons*/
+/*nov 25th we were trying to figure out the social media icons*/
+#twitter, #facebook, #instagram /*I solved the problem  */
+{
+	width: 25px;
+	height: 25px;
+	background-color: #053e68;
+	border-radius: 80%; /*I changed the size */
+	padding: 4px; /*I added padding */
+	margin-left: 15px;
+/*	margin-top: 51px;*//*I changed the size */
+
+}
+
+#twitter:hover, #facebook:hover, #instagram:hover
+{
+	background-color: #aadad1;
+}
+
+/* navigation */
+.mainNav
+{/* Font styles from Google fonts */
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	display: inline;
+	margin-left: auto;
+	text-align: right;
+}
+
+.mainNav ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+.mainNav ul li
+{
+	display: inline;
+}
+
+.mainNav ul li a
+{
+	color: #053e68;
+	padding: 14px 17px;
+}
+
+.mainNav ul li a:hover
+{
+	border: solid 1px #73c2b3;
+	color: #73c2b3;
+}
+
+.mainFooter
+{
+	padding-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #f5f1ee;
+}
+
+.mainFooterNav
+{/* Font styles from Google fonts */
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	display: inline;
+	margin-right: auto;
+	text-align: right;
+	align-self: flex-start;
+	margin-top: 40px;
+}
+
+.mainFooterNav ul
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+.mainFooterNav ul li
+{
+	display: inline;
+}
+
+.mainFooterNav ul li a
+{
+	color: #053e68;
+	padding: 14px 17px;
+}
+
+.mainFooterNav ul li a:hover
+{
+	border: solid 1px #73c2b3;
+	color: #73c2b3;
+}
+
+.copyRight
+{
+	display: flex;
+	flex-direction: row;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+.copyRight img
+{
+	width: 50px;
+	margin-top: -10px;
+/*	line-height: 48px;*/
+}
+
+.copyRight p
+{
+	background: none;
+	color: #053e68;
+	margin-left: 5px;
+	text-align: center;
+}
+
+#CRtop
+{
+	margin-top: 46px;
+}
+/*Home Page*/
+.mainHome
+{
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-right: solid 1px #f5f1ee;
+	border-left: solid 1px #f5f1ee;
+}
+
+.topBanner
+{
+	margin-top: 39px;
+	margin-bottom: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 920px;
+	background: url(../images/stock/macaroons_banner.jpg) no-repeat bottom;
+	height: 254px;
+	display: flex;
+	flex-direction: row;
+}
+
+.topBanner p
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	background: none;
+}
+
+.topBantop
+{
+	margin-top: 74px;
+	margin-left: 409px;
+}
+
+#topBanT1
+{
+	font-size: 27px;
+	font-weight: normal;
+	width: 295px;
+	height: 52px;
+	text-align: left;
+	letter-spacing: 2px;
+}
+
+#topBanT2
+{
+	font-size: 55px;
+	text-align: left;
+	letter-spacing: 6px;
+	margin-top: 5px;
+}
+
+#topBanT3
+{
+	font-size: 150px;
+	margin-top: 35px;
+	margin-left: -20px;
+}
+
+.aboutLB
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-bottom: 80px;
+}
+
+.aboutLBLeft
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
+.picturesHover
+{
+	position: relative;
+	z-index: 4;
+	margin-left: 30px;
+}
+
+.bgPink
+{
+	background-color: rgba(242, 151, 148);
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	margin-top: 45px;
+	margin-left: -235px;
+	z-index: -1;
+}
+
+.picturesHover img
+{
+	width: 200px;
+	height: 300px;
+	margin-top: 45px;
+	margin-left: -235px;
+	z-index: 3;
+}
+
+.hoverText
+{
+	visibility: hidden;
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	color: #053e68; /* Change color to dark blue  */
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	padding-top: 12px;
+	margin-top: -170px;
+	margin-left: -235px;
+	letter-spacing: 1px;
+	opacity: 0;
+}
+
+.hoverText a{
+	color: #f29794
+}
+
+.picturesHover:hover .hoverText
+{
+	background-color: #f5f1ee;
+	width: 200px;
+	height: 30px;
+	visibility: visible;
+	opacity: 1;
+}
+
+.picturesHover:hover img
+{
+	opacity: 0.9;
+}
+
+.borderBox
+{
+	border: 2px solid #73c2b3;
+	width: 353px;
+	height: 381px;
+	position: absolute;
+	margin-left: 40px;
+/*	padding-left: 148px;*/
+}
+
+.borderBox h4
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	background: none;
+	color: #73c2b3;
+	font-size: 22px;
+	letter-spacing: 2px;
+	font-weight: 400;
+	padding-left: 140px;
+	padding-top: 10px;
+}
+
+.borderBox p
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	background: none;
+	color: #5c5d60;
+	width: 170px;
+	height: 154px;
+	font-size: 17px;
+	text-align: left;
+	font-weight: 500;
+	word-spacing: -1px;
+	padding-left: 140px;
+	line-height: 1.3;
+	margin-top: -10px;
+}
+
+.aboutLBRight
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: relative;
+}
+
+.aboutLBRight img
+{
+	width: 200px;
+	height: 300px;
+	margin-top: 45px;
+	margin-left: -235px;
+	z-index: 2;
+}
+
+/*Explore Desserts Page*/
+#mainPosts
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	border-right: solid 1px #f5f1ee;
+	border-left: solid 1px #f5f1ee;
+	background-color: #fff;
+	height: 1700px;
+	/* margin-top: 45px; */
+}
+
+.bakeStore
+{
+	margin-top: 45px;
+	width: 415px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.dessertPicture
+{
+	width: 189px;
+	height: 257px;
+	z-index: 4;
+}
+	/* Aqua border */
+.reviewDesserts
+{
+	border: 2px solid #73c2b3;
+  height: 549px;
+  width: 438px;
+  position: absolute;
+  top: 150px;
+}
+/* Heading 2 */
+.title2
+{
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-size: 21px;
+	color: #73c2b3;
+	letter-spacing: 2px;
+	line-height: 25px;
+	text-align: left;
+	margin-top: 150px;
+	margin-left: 20px;
+	margin-bottom: -7px;
+}
+
+.descriptionReview
+{
+	list-style-type: none;
+	padding: 0;
+}
+
+	/* Italic */
+i{
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin-left: 18px;
+	color: #5c5d60;
+}
+
+/* Heading 2 */
+.boldTitle
+{
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	margin-left: 20px;
+	font-weight: bold;
+	line-height: 2.5;
+	color: #5c5d60;
+}
+
+.description1
+{
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	margin-left: 20px;
+	margin-right: 20px;
+	line-height: 1.5;
+	color: #5c5d60;
+	text-align: left;
+}
+
+/*Contact Page*/
+
+.mainCon
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-right: solid 1px #f5f1ee;
+	border-left: solid 1px #f5f1ee;
+	background-color: #fff;
+}
+
+.mainCon p
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	background: none;
+	color: #5c5d60;
+	font-size: 17px;
+}
+
+.contactArea
+{
+	margin-bottom: 50px;
+	border: 2px solid #73c2b3;
+	width: 410px;
+	height: 633px;
+	margin-top: 37px;
+	padding-left: 23px;
+}
+
+.contactArea h2
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-size: 28px;
+	color: #73c2b3;
+	letter-spacing: 3px;
+	font-weight: bolder;
+	margin-top: 10px;
+}
+
+.contactText h3
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	font-size: 21px;
+	color: #73c2b3;
+	letter-spacing: 2px;
+	font-weight: bolder;
+	margin-left: 1px;
+}
+
+.contactArea p
+{
+	text-align: left;
+	letter-spacing: 2px;
+	width: 395px;
+	height: 65px;
+}
+
+.contactText p
+{
+	font-size: 15px;
+	margin-bottom: 30px;
+	width: 370px;
+	height: 50px;
+}
+
+#contactForm
+{
+	margin-top: -30px;
+	width: 400px;
+}
+
+input
+{
+	background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: 25px;
+    margin-left: -4px;
+    padding-left: 8px;
+	border-bottom: 1px solid #73c2b3;
+}
+
+input[type="text"]
+{
+	width: 315px;
+}
+
+input[type="email"]
+{
+	width: 320px;
+}
+
+input[type="tel"]
+{
+	width: 305px;
+	padding-left: 15px;
+}
+
+label
+{
+	text-align: left;
+	font-size: 17px;
+	line-height: 60px;
+	letter-spacing: 2px;
+	width: 50px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #73c2b3;
+}
+
+label[for="comments"]
+{
+	border: none;
+}
+
+#message
+{
+	position: absolute;
+	z-index: 2;
+	margin-left: 10px;
+}
+
+textarea
+{
+	display: block;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 40px;
+	width: 250px;
+	height: 10px;
+	border: 1px solid #73c2b3;
+}
+
+#comments
+{
+	margin-top: 10px;
+	width: 360px;
+	height: 180px;
+	position: relative;
+}
+
+#contactForm #submit
+{
+	float: right;
+	margin-right: 18px;
+	margin-top: 10px;
+}
+
+#submit
+{
+	font-family: Montserrat, Helvetica, Arial, sans-serif;
+	width: 130px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	height: 35px;
+	border: 2px solid #73c2b3;
+	color: #73c2b3;
+}
+
+#submit:hover
+{
+	border: 2px solid #f29794;
+	color: #f29794;
+}
+
+.LBInfo
+{
+	width: 410px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.LBInfo img
+{
+	width: 382px;
+	height: 277px;
+	margin-left: 5px;
+	z-index: 2;
+}
+
+.infoBorder
+{
+	border: 2px solid #73c2b3;
+	top: 111px;
+	position: absolute;
+	width: 430px;
+	height: 523px;
+	margin-left: -20px;
+}
+
+.infoBorder ul
+{
+	list-style-type: none;
+	margin-top: 200px;
+}
+
+.infoBorder ul li
+{
+	text-align: center;
+	margin-left: -30px;
+	font-size: 20px;
+	line-height: 30px;
+	margin-top: 5px;
+}
+
+.infoBorder ul li span
+{
+	color: #73c2b3;
+}
+
+#hoverEmail
+{
+	color: #5c5d60;
+}
